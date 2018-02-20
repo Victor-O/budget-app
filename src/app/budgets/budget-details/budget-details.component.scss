@@ -1,0 +1,57 @@
+
+.image {
+  margin: 25px;
+  width: 550px;
+  height: 300px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.listOfDetails {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 18px;
+  margin: 8px;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    margin: 6px;
+    align-items: center;
+
+    .description {
+      width: 200px;
+    }
+  }
+}
+
+.value input {
+  border-radius: 4px;
+  height: 25px;
+  font-size: 16px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+
+  .budgetButton {
+    height: 45px;
+    width: 150px;
+    background: burlywood;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    font-size: 16px;
+    margin: 16px;
+  }
+
+  .budgetButton:hover {
+    background: chocolate;
+    cursor: pointer;
+  }
+}
+

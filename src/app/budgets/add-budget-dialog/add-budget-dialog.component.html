@@ -1,0 +1,63 @@
+<h2>{{receivedData.title}}</h2>
+
+
+<form [formGroup]="budgetForm" (ngSubmit)="onSave()">
+  <div class="formGroup">
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" placeholder="City. Required" required [(ngModel)]="budget.city" formControlName="city">
+  </div>
+  <div class="formGroup">
+    <label for="country">Country</label>
+    <input type="text" name="country" id="country" placeholder="Country" [(ngModel)]="budget.country" formControlName="country">
+  </div>
+  <div class="formGroup">
+    <label for="imageUrl">ImageUrl</label>
+    <input type="text" name="imageUrl" id="imageUrl" placeholder="ImageUrl" [(ngModel)]="budget.imageUrl" formControlName="imageUrl">
+  </div>
+  <div class="formGroup">
+    <label for="rent">Rent</label>
+    <input type="number" name="rent" id="rent" min="0" [(ngModel)]="budget.rent" formControlName="rent">
+  </div>
+  <div class="formGroup">
+    <label for="utilities">Utilities</label>
+    <input type="number" name="utilities" id="utilities" [(ngModel)]="budget.utilities" formControlName="utilities">
+  </div>
+  <div class="formGroup">
+    <label for="subscriptions">Subscriptions</label>
+    <input type="number" name="subscriptions" id="subscriptions" min="0" [(ngModel)]="budget.subscriptions" formControlName="subscriptions">
+  </div>
+  <div class="formGroup">
+    <label for="food">Food</label>
+    <input type="number" name="food" id="food" min="0" [(ngModel)]="budget.food" formControlName="food">
+  </div>
+  <div class="formGroup">
+    <label for="otherHouseGoods">Other house goods</label>
+    <input type="number" name="otherHouseGoods" id="otherHouseGoods" min="0" [(ngModel)]="budget.otherHouseGoods" formControlName="otherHouseGoods">
+  </div>
+  <div class="formGroup">
+    <label for="daycare">Daycare / school</label>
+    <input type="number" name="daycare" id="daycare" min="0" [(ngModel)]="budget.daycare" formControlName="daycare">
+  </div>
+  <div class="formGroup">
+    <label for="credit">Loans</label>
+    <input type="number" name="credit" id="credit" min="0" [(ngModel)]="budget.credit" formControlName="credit">
+  </div>
+  <div class="formGroup">
+    <label for="transport">Transport</label>
+    <input type="number" name="transport" id="transport" min="0" [(ngModel)]="budget.transport" formControlName="transport">
+  </div>
+  <div class="formGroup">
+    <label for="localLanguageLessons">Local language lessons</label>
+    <input type="number" name="localLanguageLessons" id="localLanguageLessons" min="0" [(ngModel)]="budget.localLanguageLessons" formControlName="localLanguageLessons">
+  </div>
+  <div class="showTotal">
+    <div class="totalTitle">Total</div>
+    <div class="totalValue">{{budget.total | currency:'EUR'}}</div>
+  </div>
+  <div class="buttons">
+    <button type="submit" class="saveButton" [disabled]="!budgetForm.valid">Save</button>
+    <button (click)="onCloseDialog()" class="closeButton">Close</button>
+  </div>
+</form>
+
+

@@ -1,0 +1,13 @@
+<div class="budgetItem">
+  <div class="budgetInfo" (click)="sendToBudgetDetails(budget.id)">
+    <div class="image">
+      <img [src]="budget.imageUrl">
+    </div>
+    <div class="city">{{budget.city}}</div>
+    <div class="country">{{budget.country}}</div>
+    <div class="total">{{budget.total}}</div>
+  </div>
+
+  <button class="deleteButton" (click)="deleteBudget(budget)">Delete</button>
+</div>
+

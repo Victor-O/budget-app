@@ -1,0 +1,81 @@
+
+.formGroup {
+  font-size: 16px;
+  margin: 6px 0;
+
+  label {
+    width: 200px;
+    display: inline-block;
+    height: 25px;
+  }
+
+  input {
+    width: 300px;
+    border-radius: 4px;
+    height: 25px;
+    outline: none;
+  }
+}
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+.showTotal {
+  font-size: 16px;
+  height: 25px;
+  margin: 6px 0;
+  display: flex;
+  flex-direction: row;
+
+  .totalTitle {
+    width: 200px;
+  }
+  .totalValue {
+    width: 300px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.saveButton {
+  height: 45px;
+  width: 150px;
+  background: lightgreen;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  margin: 16px;
+  color: black;
+}
+
+.saveButton:hover {
+  background: forestgreen;
+  color: white;
+  cursor: pointer;
+}
+
+.closeButton {
+  height: 45px;
+  width: 150px;
+  background: white;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  margin: 16px;
+}
+
+.closeButton:hover {
+  background: wheat;
+  cursor: pointer;
+}

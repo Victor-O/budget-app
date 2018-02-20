@@ -1,0 +1,85 @@
+<div *ngIf="budget">
+  <div class="image">
+    <img [src]="budget.imageUrl">
+  </div>
+
+  <div class="listOfDetails">
+    <div class="city row">
+      <div class="description">City</div>
+      <div class="value">
+        <input type="text" [(ngModel)]="budget.city">
+      </div>
+    </div>
+    <div class="country row">
+      <div class="description">Country</div>
+      <div class="value">
+        <input type="text" [(ngModel)]="budget.country">
+      </div>
+    </div>
+    <div class="rent row">
+      <div class="description">Rent</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.rent" (ngModelChange)="updateTotal()">
+      </div>
+    </div>
+    <div class="utilities row">
+      <div class="description">Utilities</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.utilities">
+      </div>
+    </div>
+    <div class="subscriptions row">
+      <div class="description">Subscriptions</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.subscriptions">
+      </div>
+    </div>
+    <div class="food row">
+      <div class="description">Food</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.food">
+      </div>
+    </div>
+    <div class="otherHouseGoods row">
+      <div class="description">Other house goods</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.otherHouseGoods">
+      </div>
+    </div>
+    <div class="daycare row">
+      <div class="description">Daycare</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.daycare">
+      </div>
+    </div>
+    <div class="credit row">
+      <div class="description">Credit</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.credit">
+      </div>
+    </div>
+    <div class="transport row">
+      <div class="description">Transport</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.transport">
+      </div>
+    </div>
+    <div class="localLanguageLessons row">
+      <div class="description">Language lessons</div>
+      <div class="value">
+        <input type="number" [(ngModel)]="budget.localLanguageLessons">
+      </div>
+    </div>
+    <div class="total row">
+      <div class="description">Total</div>
+      <div class="value">{{budget.total | currency:'EUR'}}</div>
+    </div>
+  </div>
+
+  <div class="buttonContainer">
+    <button class="budgetButton" (click)="saveBudget()">Save</button>
+    <button class="budgetButton" (click)="sendBackToBudgets()">Back to Budgets</button>
+  </div>
+</div>
+
+

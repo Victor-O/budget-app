@@ -1,0 +1,54 @@
+
+.budgetItem {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  margin: 8px;
+  outline: none;
+
+  .budgetInfo {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+  }
+
+  .image {
+    width: 125px;
+    padding: 0 8px;
+    max-height: 75px;
+    img{
+      height: 75px;
+      width: 125px;
+    }
+  }
+
+  .city {
+    padding: 0 8px;
+    width: 125px;
+  }
+  .country {
+    padding: 0 8px;
+    width: 125px;
+  }
+}
+
+.budgetItem:hover {
+  background: gainsboro;
+  cursor: pointer;
+}
+
+.deleteButton {
+  height: 45px;
+  width: 150px;
+  background: aqua;
+  border-radius: 10px;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  margin: 16px 16px 16px 50px;
+}
+
+.deleteButton:hover {
+  background: cornflowerblue;
+  cursor: pointer;
+}

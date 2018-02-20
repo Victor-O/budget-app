@@ -1,0 +1,8 @@
+<div class="addBudgetOpenDialog">
+  <button class="openDialog" (click)="openDialog()">Add Budget</button>
+</div>
+
+<ba-budget-item *ngFor="let budget of budgets"
+                [budget]="budget"
+                (onDeleteBudget)="deleteBudget($event)"
+></ba-budget-item>
